@@ -1,33 +1,39 @@
 import React from 'react';
 import Home from './src/screens/Home';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Header from './src/components/Header';
-import styled from 'styled-components';
 import {ImageBackground} from 'react-native';
-import DefaultTheme from '@react-navigation/native';
+import styled from 'styled-components';
 
 const Stack = createNativeStackNavigator();
 
-const navTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: 'transparent',
-  },
-};
-
 const App = () => {
+  const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      background: 'transparent',
+    },
+  };
+
   return (
-    <ImageBackground source={require('./src/assets/background.jpg')}>
-      <NavigationContainer theme={navTheme}>
+    <StyledBackground source={require('./src/assets/background.jpg')}>
+      <NavigationContainer theme={MyTheme}>
         <Header />
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+          }}>
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
-    </ImageBackground>
+    </StyledBackground>
   );
 };
+
+const StyledBackground = styled.ImageBackground`
+  flex: 1;
+`;
 
 export default App;

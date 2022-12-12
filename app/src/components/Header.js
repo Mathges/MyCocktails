@@ -1,12 +1,38 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import styled from 'styled-components';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import MenuBurger from './MenuBurger';
 
 const Header = () => {
   return (
-    <View>
-      <Text>Header</Text>
-    </View>
+    <StyledHeader>
+      <StyledIdentity>
+        <Fontisto name="cocktail" size={35} color="white" />
+        <MainTitle>My Cocktails</MainTitle>
+      </StyledIdentity>
+      <MenuBurger />
+    </StyledHeader>
   );
 };
+
+const StyledHeader = styled.View`
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+`;
+
+const StyledIdentity = styled.View`
+  flex: 1;
+  flex-direction: row;
+`;
+
+const MainTitle = styled.Text`
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+`;
 
 export default Header;
