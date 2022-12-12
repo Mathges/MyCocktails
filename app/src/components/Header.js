@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MenuBurger from './MenuBurger';
@@ -24,7 +23,7 @@ const StyledHeader = styled.View`
   padding: 10px;
 `;
 
-const StyledIdentity = styled.View`
+const StyledIdentity = styled.TouchableOpacity`
   flex: 1;
   flex-direction: row;
 `;
