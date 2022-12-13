@@ -2,7 +2,7 @@
 
 ## Summary 
 
-This is about making a simple app about cocktails.  
+This is about making a simple app about cocktails, running on **ANDROID**.  
 The app will be split into 2 parts.  
 The first one will be about to let user find a cocktail by fetching an external api.  
 The second one will be about integrate the possibility for the user to create and retrieve his own cocktails recipes.  

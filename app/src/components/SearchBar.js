@@ -6,17 +6,20 @@ import axios from 'axios';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [cocktails, setCocktails] = useState('');
+  const [cocktails, setCocktails] = useState([]);
 
-  async function fetchApi() {
-    axios
-      .get({
-        url: `www.thecocktaildb.com/api/json/v1/1/search.php?s=${term}`,
-      })
-      .then(response => {
-        setCocktails(response.drinks);
-        console.log(response);
-      });
+  function fetchApi(term) {
+    try {
+      axios
+        .get(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${term}`)
+        .then(response => {
+          console.log(response.data.drinks);
+          setCocktails(response.data.drinks);
+          console.log(cocktails);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
