@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext, useState} from 'react';
 import Home from './src/screens/Home';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -8,7 +8,11 @@ import styled from 'styled-components';
 
 const Stack = createNativeStackNavigator();
 
+export const CocktailContext = createContext();
+
 const App = () => {
+  const [cocktails, setCokctails] = useState([]);
+
   const MyTheme = {
     ...DefaultTheme,
     colors: {
@@ -18,18 +22,21 @@ const App = () => {
   };
 
   return (
-    <StyledBackground source={require('./src/assets/background.jpg')}>
-      <NavigationContainer theme={MyTheme}>
-        <Header />
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}>
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </StyledBackground>
+    <CocktailContext.Provider value={{cocktails, setCokctails}}>
+      <StyledBackground source={require('./src/assets/background.jpg')}>
+        <NavigationContainer theme={MyTheme}>
+          <Header />
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}>
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </StyledBackground>
+    </CocktailContext.Provider>
   );
+  
 };
 
 const StyledBackground = styled.ImageBackground`

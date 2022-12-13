@@ -1,21 +1,20 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {TextInput, View, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import axios from 'axios';
+import CocktailContext from '../../App.js';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [cocktails, setCocktails] = useState([]);
+  const [cocktails, setCocktails] = useContext(CocktailContext);
 
   function fetchApi(term) {
     try {
       axios
         .get(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${term}`)
         .then(response => {
-          console.log(response.data.drinks);
           setCocktails(response.data.drinks);
-          console.log(cocktails);
         });
     } catch (error) {
       console.log(error);
