@@ -1,17 +1,19 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Text, Image} from 'react-native';
+import {Text, Image, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 
 const CocktailPreview = ({item}) => {
+  const navigation = useNavigation();
+
   return (
     <CocktailCard>
-      <Image
-        source={{uri: item.strDrinkThumb}}
-        style={{
-          width: 200,
-          height: 200,
-        }}
-      />
+      <TouchableOpacity onPress={() => navigation.navigate('Cocktail Details')}>
+        <Image
+          source={{uri: item.strDrinkThumb}}
+          style={{width: 200, height: 200}}
+        />
+      </TouchableOpacity>
       <StyledText>{item.strDrink}</StyledText>
     </CocktailCard>
   );
