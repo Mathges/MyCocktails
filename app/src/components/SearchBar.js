@@ -3,11 +3,11 @@ import {TextInput, View, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import axios from 'axios';
-import CocktailContext from '../../App.js';
+import ApiCocktailsContext from '../utils/Contexts';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [cocktails, setCocktails] = useContext(CocktailContext);
+  const {cocktails, setCocktails} = useContext(ApiCocktailsContext);
 
   function fetchApi(term) {
     try {

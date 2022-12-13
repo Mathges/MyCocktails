@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import {FlatList} from 'react-native';
 import CocktailPreview from './CocktailPreview';
+import ApiCocktailsContext from '../utils/Contexts';
 
-const CocktailPreviewList = (cocktails) => {
+const CocktailPreviewList = () => {
+  const {cocktails, setCocktails} = useContext(ApiCocktailsContext);
+
   return (
     <FlatList
       data={cocktails}
       renderItem={CocktailPreview}
-      keyExtractor={item => item.id}
+      keyExtractor={item => item.drinkId}
     />
   );
 };

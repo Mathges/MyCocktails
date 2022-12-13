@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import styled from 'styled-components';
-import CocktailPreview from '../components/CocktailPreview';
+import CocktailPreviewList from '../components/CocktailPreviewList';
 import SearchBar from '../components/SearchBar';
 
 const Home = () => {
   return (
     <StyledHome>
       <SearchBar />
-      <CocktailPreview />
+      <CocktailPreviewList />
     </StyledHome>
   );
 };

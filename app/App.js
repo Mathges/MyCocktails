@@ -1,17 +1,17 @@
-import React, {createContext, useState} from 'react';
+import React, {useState} from 'react';
 import Home from './src/screens/Home';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Header from './src/components/Header';
 import {ImageBackground} from 'react-native';
 import styled from 'styled-components';
+import ApiCocktailsContext from './src/utils/Contexts';
 
 const Stack = createNativeStackNavigator();
 
-export const CocktailContext = createContext();
-
 const App = () => {
-  const [cocktails, setCokctails] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
+  const value = {cocktails, setCocktails};
 
   const MyTheme = {
     ...DefaultTheme,
@@ -22,7 +22,7 @@ const App = () => {
   };
 
   return (
-    <CocktailContext.Provider value={{cocktails, setCokctails}}>
+    <ApiCocktailsContext.Provider value={value}>
       <StyledBackground source={require('./src/assets/background.jpg')}>
         <NavigationContainer theme={MyTheme}>
           <Header />
@@ -34,9 +34,8 @@ const App = () => {
           </Stack.Navigator>
         </NavigationContainer>
       </StyledBackground>
-    </CocktailContext.Provider>
+    </ApiCocktailsContext.Provider>
   );
-  
 };
 
 const StyledBackground = styled.ImageBackground`
