@@ -1,21 +1,27 @@
-import {useNavigation} from '@react-navigation/native';
-import React from 'react';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import React, {useContext} from 'react';
 import {Text, Image, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 
 const CocktailPreview = ({item}) => {
+  // This one were tough to make functionnal
+  // i needed to pass props on flatlist renderItem attribute to make it works
   const navigation = useNavigation();
 
   return (
-    <CocktailCard>
-      <TouchableOpacity onPress={() => navigation.navigate('Cocktail Details')}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('CocktailDetails', {id: item.idDrink})
+      }>
+      <CocktailCard>
         <Image
           source={{uri: item.strDrinkThumb}}
           style={{width: 200, height: 200}}
         />
-      </TouchableOpacity>
-      <StyledText>{item.strDrink}</StyledText>
-    </CocktailCard>
+
+        <StyledText>{item.strDrink}</StyledText>
+      </CocktailCard>
+    </TouchableOpacity>
   );
 };
 

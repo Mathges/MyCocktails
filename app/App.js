@@ -32,7 +32,7 @@ const App = () => {
           <Header />
           <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Cocktail Details" component={CocktailDetails} />
+            <Stack.Screen name="CocktailDetails" component={CocktailDetails} />
           </Stack.Navigator>
         </NavigationContainer>
       </StyledBackground>
