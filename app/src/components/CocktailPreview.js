@@ -1,6 +1,6 @@
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
-import React, {useContext} from 'react';
-import {Text, Image, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import React from 'react';
+import {Image, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
 
 const CocktailPreview = ({item}) => {
