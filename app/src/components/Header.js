@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Fontisto from 'react-native-vector-icons/Fontisto';
+
 import MenuBurger from './MenuBurger';
 
 const Header = () => {

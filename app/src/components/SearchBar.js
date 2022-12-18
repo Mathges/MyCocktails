@@ -1,9 +1,11 @@
 import React, {useContext, useState} from 'react';
-import {TextInput, View, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
-import Fontisto from 'react-native-vector-icons/Fontisto';
+import {TextInput, View, TouchableOpacity} from 'react-native';
 import axios from 'axios';
+
 import ApiCocktailsContext from '../utils/Contexts';
+
+import Fontisto from 'react-native-vector-icons/Fontisto';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');

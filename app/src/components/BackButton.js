@@ -1,7 +1,8 @@
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {Text} from 'react-native';
 import styled from 'styled-components';
+import {Text} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
 
 const BackButton = () => {
   const navigation = useNavigation();

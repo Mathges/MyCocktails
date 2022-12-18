@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import styled from 'styled-components';
+import {Image, ScrollView} from 'react-native';
+
 import {useNavigation} from '@react-navigation/native';
+
 import BackButton from './BackButton';
 
 const CocktailDetail = cocktail => {

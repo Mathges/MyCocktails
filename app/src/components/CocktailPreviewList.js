@@ -1,7 +1,9 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useContext} from 'react';
 import {FlatList} from 'react-native';
-import CocktailPreview from './CocktailPreview';
+
 import ApiCocktailsContext from '../utils/Contexts';
+
+import CocktailPreview from './CocktailPreview';
 
 const CocktailPreviewList = props => {
   const {cocktails, setCocktails} = useContext(ApiCocktailsContext);

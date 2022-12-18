@@ -1,11 +1,12 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, TouchableOpacity} from 'react-native';
 import styled from 'styled-components';
+import {Image, TouchableOpacity} from 'react-native';
+
+import {useNavigation} from '@react-navigation/native';
 
 const CocktailPreview = ({item}) => {
   // This one were tough to make functionnal
-  // i needed to pass props on flatlist renderItem attribute to make it works
+  // i needed to pass props on flatlist renderItem attribute to make navigation works
   const navigation = useNavigation();
 
   return (

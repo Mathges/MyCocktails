@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {Text} from 'react-native';
 import styled from 'styled-components';
-import CocktailDetail from '../components/CocktailDetail';
 import axios from 'axios';
+
+import CocktailDetail from '../components/CocktailDetail';
 
 const CocktailDetails = ({route}) => {
   const [cocktail, setCocktail] = useState({});
