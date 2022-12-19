@@ -3,7 +3,7 @@ import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import styled from 'styled-components';
 
-import Home from './src/screens/Home';
+import Home from './src/screens/Home/Home';
 import CocktailDetails from './src/screens/CocktailDetails';
 
 import Header from './src/components/Header/Header';

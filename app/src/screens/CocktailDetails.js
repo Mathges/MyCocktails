@@ -23,7 +23,4 @@ const CocktailDetails = ({route}) => {
   return <CocktailDetail {...cocktail} />;
 };
 
-const StyledText = styled.Text`
-  color: #fff;
-`;
 export default CocktailDetails;

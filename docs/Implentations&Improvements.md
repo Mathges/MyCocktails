@@ -18,7 +18,7 @@ The ScrollView implementation isn't good, i'll need to figure out for a better i
 
 CocktailDetails component can be refactored and improved. For example make a unique component Section for ingredients and recipe could be a good refacto.  
 
-Some styles can be improved too. It can be isolated from components. And adding some font.    
+Some styles can be improved too. Declaring some app style variables and adding some font.    
 
 Routes can be isolated from app.  
 
