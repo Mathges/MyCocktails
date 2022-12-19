@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import CocktailPreviewList from '../components/CocktailPreviewList';
-import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const Home = () => {
   return (

@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Image, TouchableOpacity} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
+
+import {StyledText, CocktailCard} from './style';
 
 const CocktailPreview = ({item}) => {
   // This one were tough to make functionnal
@@ -26,22 +27,6 @@ const CocktailPreview = ({item}) => {
   );
 };
 
-const StyledText = styled.Text`
-  color: #fff;
-  font-size: 25px;
-`;
-
-const CocktailCard = styled.View`
-  width: 250px;
-  height: 250px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-`;
 export default CocktailPreview;
 
 /* example of response item

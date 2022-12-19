@@ -1,14 +1,13 @@
-// external libs imports
 import React, {useState} from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import styled from 'styled-components';
-// screens
+
 import Home from './src/screens/Home';
 import CocktailDetails from './src/screens/CocktailDetails';
-// components
-import Header from './src/components/Header';
-// utils
+
+import Header from './src/components/Header/Header';
+
 import ApiCocktailsContext from './src/utils/Contexts';
 
 const Stack = createNativeStackNavigator();
