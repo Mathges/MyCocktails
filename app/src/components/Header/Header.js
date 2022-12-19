@@ -2,7 +2,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-import MenuBurger from '../MenuBurger';
+import MenuBurger from '../MenuBurger/MenuBurger';
 
 import {StyledHeader, StyledIdentity, MainTitle} from './style';
 

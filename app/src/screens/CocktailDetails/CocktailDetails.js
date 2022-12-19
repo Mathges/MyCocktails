@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
 import axios from 'axios';
 
-import CocktailDetail from '../components/CocktailDetail/CocktailDetail';
+import CocktailDetail from '../../components/CocktailDetail/CocktailDetail';
 
 const CocktailDetails = ({route}) => {
   const [cocktail, setCocktail] = useState({});

@@ -20,6 +20,18 @@ CocktailDetails component can be refactored and improved. For example make a uni
 
 Some styles can be improved too. Declaring some app style variables and adding some font.    
 
-Routes can be isolated from app.  
+Routes can be isolated from app.
+
+Axios call should be isolated too.
 
 Some UX is missing, like loading while requesting api, returning error if there is from api, or a not found page if user is asking for non-existent cocktail.  
+
+
+### Priority
+
+- Isolate Axios & router
+- Make css vars
+- Loading and 404 page
+- Better scrollview for cocktail details
+- making api BaseURL as env var
+- make image component

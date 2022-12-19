@@ -1,9 +1,9 @@
 import React from 'react';
 
-import StyledHome from './style';
-
-import CocktailPreviewList from '../../components/CocktailPreviewList';
+import CocktailPreviewList from '../../components/CocktailPreviewList/CocktailPreviewList';
 import SearchBar from '../../components/SearchBar/SearchBar';
+
+import StyledHome from './style';
 
 const Home = () => {
   return (
