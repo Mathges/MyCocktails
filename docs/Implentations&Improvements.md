@@ -16,7 +16,7 @@ The function to format ingredients of API response can be improved. It's a bit d
 
 The ScrollView implementation isn't good, i'll need to figure out for a better implementation.  
 
-CocktailDetails component can be refactored and improved. For example make a unique component Section for ingredients and recipe could be a good refacto.  
+CocktailDetails component can be refactored and improved. For example make a unique component Section for ingredients and recipe could be a good refacto. But this will need some dynamism.  
 
 Some styles can be improved too. Declaring some app style variables and adding some font.    
 

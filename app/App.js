@@ -8,6 +8,8 @@ import CocktailDetails from './src/screens/CocktailDetails';
 
 import Header from './src/components/Header/Header';
 
+//import DefaultStyle from './DefaultStyle';
+
 import ApiCocktailsContext from './src/utils/Contexts';
 
 const Stack = createNativeStackNavigator();
@@ -26,6 +28,7 @@ const App = () => {
 
   return (
     <ApiCocktailsContext.Provider value={value}>
+      {/*<DefaultStyle />*/}
       <StyledBackground source={require('./src/assets/background.jpg')}>
         <NavigationContainer theme={MyTheme}>
           <Header />
