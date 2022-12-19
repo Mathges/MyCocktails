@@ -1,7 +1,7 @@
 // this one is a bit tricky and dirty i'll need to clarify that
 // for now, i'll just add comments
 // the purpose is to format ingredients with measures
-const formatIngredients = (cocktail) => {
+const formatIngredients = cocktail => {
   // I iniate 3 arrays, 1 for ingredients, 1 for measures, and 1 for returning the whole thing
   const ingredients = [];
   const measures = [];
@@ -22,7 +22,9 @@ const formatIngredients = (cocktail) => {
   while (count < ingredients.length) {
     // if the measure is truthy, I add it to another array
     if (!!measures[count] !== false) {
-      formattedIngredients[count] = `${measures[count]} of ${ingredients[count]}`;
+      formattedIngredients[
+        count
+      ] = `${measures[count]} of ${ingredients[count]}`;
       console.log(formattedIngredients[count]);
     } else {
       // if not, I add only the ingredient
