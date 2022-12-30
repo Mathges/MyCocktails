@@ -12,6 +12,7 @@ const formatIngredients = cocktail => {
     if (key.includes('Ingredient') && value !== null) {
       ingredients.push(value);
     } else if (key.includes('Measure') && value !== null) {
+      console.log('measure: ', value);
       measures.push(value);
     }
   }

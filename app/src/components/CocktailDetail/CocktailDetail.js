@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Image, ScrollView} from 'react-native';
 
 import BackButton from '../BackButton/BackButton';
+import CocktailPicture from '../CocktailPicture/CocktailPicture';
 
 import formatIngredients from '../../utils/formatIngredients';
 
@@ -36,10 +37,7 @@ const CocktailDetail = cocktail => {
       <ScrollView>
         <DetailCard>
           <MainTitle>{cocktail.strDrink}</MainTitle>
-          <Image
-            source={{uri: cocktail.strDrinkThumb}}
-            style={{width: 250, height: 250}}
-          />
+          <CocktailPicture image={cocktail.strDrinkThumb} />
           <CardSection>
             <Subtitle>Ingredients</Subtitle>
             {ingredientList}

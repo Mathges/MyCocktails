@@ -8,16 +8,15 @@ import ApiCocktailsContext from '../../utils/Contexts';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const {cocktails, setCocktails} = useContext(ApiCocktailsContext);
+  const {setCocktails} = useContext(ApiCocktailsContext);
 
   return (
     <StyledSearchArea>
       <StyledInput onChangeText={text => setSearchTerm(text)} />
       <StyledButton
-        onPress={() => {
-          console.log('before: ', cocktails);
-          setCocktails(getCocktailsByName(searchTerm));
-          console.log('after: ', cocktails);
+        onPress={async () => {
+          const response = await getCocktailsByName(searchTerm);
+          setCocktails(response);
         }}>
         <Fontisto name="search" size={30} color="white" />
       </StyledButton>
