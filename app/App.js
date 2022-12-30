@@ -28,7 +28,6 @@ const App = () => {
 
   return (
     <ApiCocktailsContext.Provider value={value}>
-      {/*<DefaultStyle />*/}
       <StyledBackground source={require('./src/assets/background.jpg')}>
         <NavigationContainer theme={MyTheme}>
           <Header />

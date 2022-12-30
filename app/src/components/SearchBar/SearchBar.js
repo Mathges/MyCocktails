@@ -3,7 +3,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 
 import {StyledSearchArea, StyledInput, StyledButton} from './style';
 
-import getCocktailsByName from '../../utils/apiRequests';
+import {getCocktailsByName} from '../../utils/apiRequests';
 import ApiCocktailsContext from '../../utils/Contexts';
 
 const SearchBar = () => {

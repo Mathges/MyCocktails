@@ -29,9 +29,9 @@ Some UX is missing, like loading while requesting api, returning error if there 
 
 ### Priority
 
-- Isolate Axios & router
+- Isolate Axios (done) & router
 - Make css vars
 - Loading and 404 page
 - Better scrollview for cocktail details
 - making api BaseURL as env var
-- make image component
+- make image component (done)

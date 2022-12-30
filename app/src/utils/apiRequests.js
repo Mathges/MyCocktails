@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 async function getCocktailsByName(term) {
-  console.log('term:', term);
   return (
     axios
       .get(`https://thecocktaildb.com/api/json/v1/1/search.php?s=${term}`)
@@ -13,4 +12,12 @@ async function getCocktailsByName(term) {
   );
 }
 
-export default getCocktailsByName;
+async function getCocktailById(id) {
+  return axios
+    .get(`https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then(response => {
+      return response.data.drinks[0];
+    });
+}
+
+export {getCocktailsByName, getCocktailById};

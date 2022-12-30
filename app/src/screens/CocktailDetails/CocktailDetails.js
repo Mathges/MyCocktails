@@ -1,22 +1,23 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
 
 import CocktailDetail from '../../components/CocktailDetail/CocktailDetail';
+
+import {getCocktailById} from '../../utils/apiRequests';
 
 const CocktailDetails = ({route}) => {
   const [cocktail, setCocktail] = useState({});
 
   useEffect(() => {
-    console.log(route.params.id);
-    try {
-      axios
-        .get(
-          `https://thecocktaildb.com/api/json/v1/1/lookup.php?i=${route.params?.id}`,
-        )
-        .then(response => {
-          setCocktail(response.data.drinks[0]);
-        });
-    } catch (error) {}
+    const fetchData = async () => {
+      // console.log(route.params.id);
+      try {
+        const response = await getCocktailById(route.params.id);
+        return setCocktail(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
   }, [route.params?.id]);
 
   return <CocktailDetail {...cocktail} />;
