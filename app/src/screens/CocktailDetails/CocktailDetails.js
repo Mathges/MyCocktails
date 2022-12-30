@@ -9,7 +9,6 @@ const CocktailDetails = ({route}) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // console.log(route.params.id);
       try {
         const response = await getCocktailById(route.params.id);
         return setCocktail(response);
