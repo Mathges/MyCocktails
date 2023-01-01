@@ -34,20 +34,18 @@ const CocktailDetail = cocktail => {
   return (
     <CardContainer>
       <BackButton />
-      <ScrollView>
-        <DetailCard>
-          <MainTitle>{cocktail.strDrink}</MainTitle>
-          <CocktailPicture image={cocktail.strDrinkThumb} />
-          <CardSection>
-            <Subtitle>Ingredients</Subtitle>
-            {ingredientList}
-          </CardSection>
-          <CardSection>
-            <Subtitle>Recipe</Subtitle>
-            <Recipe>{cocktail.strInstructions}</Recipe>
-          </CardSection>
-        </DetailCard>
-      </ScrollView>
+      <DetailCard>
+        <MainTitle>{cocktail.strDrink}</MainTitle>
+        <CocktailPicture image={cocktail.strDrinkThumb} />
+        <CardSection>
+          <Subtitle>Ingredients</Subtitle>
+          {ingredientList}
+        </CardSection>
+        <CardSection>
+          <Subtitle>Recipe</Subtitle>
+          <Recipe>{cocktail.strInstructions}</Recipe>
+        </CardSection>
+      </DetailCard>
     </CardContainer>
   );
 };

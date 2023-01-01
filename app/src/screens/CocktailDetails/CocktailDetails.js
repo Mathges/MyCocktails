@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { ScrollView } from 'react-native';
 
 import CocktailDetail from '../../components/CocktailDetail/CocktailDetail';
 
@@ -19,7 +20,11 @@ const CocktailDetails = ({route}) => {
     fetchData();
   }, [route.params?.id]);
 
-  return <CocktailDetail {...cocktail} />;
+  return (
+    <ScrollView>
+      <CocktailDetail {...cocktail} />
+    </ScrollView>
+  );
 };
 
 export default CocktailDetails;
