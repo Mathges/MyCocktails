@@ -1,9 +1,8 @@
 import React, {useContext} from 'react';
-import {SafeAreaView} from 'react-native';
+import {FlatList, SafeAreaView} from 'react-native';
 
 import ApiCocktailsContext from '../../utils/Contexts';
 
-import CocktailList from './style';
 import CocktailPreview from '../CocktailPreview/CocktailPreview';
 
 const CocktailPreviewList = () => {
@@ -11,10 +10,11 @@ const CocktailPreviewList = () => {
 
   return (
     <SafeAreaView>
-      <CocktailList
+      <FlatList
         data={cocktails}
         renderItem={props => <CocktailPreview {...props} />}
         keyExtractor={item => item.drinkId}
+        contentContainerStyle={{paddingBottom: 128}}
       />
     </SafeAreaView>
   );

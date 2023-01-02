@@ -1,8 +1,14 @@
 import React from 'react';
 import Picture from './style';
 
-const CocktailPicture = image => {
-  return <Picture source={{uri: image.image}} />;
+const CocktailPicture = props => {
+  return (
+    <Picture
+      source={{uri: props.image}}
+      width={props.width}
+      height={props.height}
+    />
+  );
 };
 
 export default CocktailPicture;

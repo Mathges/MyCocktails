@@ -32,6 +32,6 @@ Some UX is missing, like loading while requesting api, returning error if there 
 - Isolate Axios (done) & router
 - Make css vars
 - Loading and 404 page
-- Better scrollview for cocktail details
+- Better scrollview for cocktail details (done)
 - making api BaseURL as env var (done)
 - make image component (done)

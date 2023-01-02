@@ -4,6 +4,7 @@ import {Image, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {StyledText, CocktailCard} from './style';
+import CocktailPicture from '../CocktailPicture/CocktailPicture';
 
 const CocktailPreview = ({item}) => {
   // This one were tough to make functionnal
@@ -16,11 +17,7 @@ const CocktailPreview = ({item}) => {
         navigation.navigate('CocktailDetails', {id: item.idDrink})
       }>
       <CocktailCard>
-        <Image
-          source={{uri: item.strDrinkThumb}}
-          style={{width: 200, height: 200}}
-        />
-
+        <CocktailPicture image={item.strDrinkThumb} width={200} height={200} />
         <StyledText>{item.strDrink}</StyledText>
       </CocktailCard>
     </TouchableOpacity>

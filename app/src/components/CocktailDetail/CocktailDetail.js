@@ -36,7 +36,11 @@ const CocktailDetail = cocktail => {
       <BackButton />
       <DetailCard>
         <MainTitle>{cocktail.strDrink}</MainTitle>
-        <CocktailPicture image={cocktail.strDrinkThumb} />
+        <CocktailPicture
+          image={cocktail.strDrinkThumb}
+          width={250}
+          height={250}
+        />
         <CardSection>
           <Subtitle>Ingredients</Subtitle>
           {ingredientList}

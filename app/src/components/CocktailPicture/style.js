@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const Picture = styled.Image`
-  width: 250px;
-  height: 250px;
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
 `;
 
 export default Picture;
