@@ -15,7 +15,7 @@ const Header = () => {
         <Fontisto name="cocktail" size={35} color="white" />
         <MainTitle>My Cocktails</MainTitle>
       </StyledIdentity>
-      <MenuBurger />
+      <MenuBurger {...navigation} />
     </StyledHeader>
   );
 };

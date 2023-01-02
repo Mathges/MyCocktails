@@ -1,16 +1,19 @@
 import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import CocktailPreviewList from '../../components/CocktailPreviewList/CocktailPreviewList';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import CocktailDetails from '../CocktailDetails/CocktailDetails';
+import CocktailList from '../CocktailList/CocktailList';
 
-import StyledHome from './style';
+const Stack = createNativeStackNavigator();
 
 const Home = () => {
   return (
-    <StyledHome>
-      <SearchBar />
-      <CocktailPreviewList />
-    </StyledHome>
+    <Stack.Navigator
+      initialRoutename="CocktailList"
+      screenOptions={{headerShown: false}}>
+      <Stack.Screen name="CocktailList" component={CocktailList} />
+      <Stack.Screen name="CocktailDetails" component={CocktailDetails} />
+    </Stack.Navigator>
   );
 };
 

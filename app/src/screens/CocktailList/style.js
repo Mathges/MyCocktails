@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const StyledHome = styled.View`
+const StyleCocktailList = styled.View`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export default StyledHome;
+export default StyleCocktailList;

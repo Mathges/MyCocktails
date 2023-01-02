@@ -6,7 +6,7 @@ import ApiCocktailsContext from '../../utils/Contexts';
 import CocktailPreview from '../CocktailPreview/CocktailPreview';
 
 const CocktailPreviewList = () => {
-  const {cocktails, setCocktails} = useContext(ApiCocktailsContext);
+  const {cocktails} = useContext(ApiCocktailsContext);
 
   return (
     <SafeAreaView>

@@ -25,6 +25,6 @@ This part should be deliver around 19th december.
 The second part is about including a possibility for the user to create his own recipes.
 To do that, we'll need a page to create cocktails, and another one to manage (edit, deletion, or just take a look at a cocktail).
 
-To modify the cocktails, there is 2 possibilities the same page than 'details' will be used but will be transformed as a for, or we redirect to the creation page, that is pre-filled with existing cocktail informations.
+To modify the cocktails, there is 2 possibilities the same page than 'details' will be used but will be transformed as a form, or we redirect to the creation page, that is pre-filled with existing cocktail informations.
 
 Personal cocktails will be stored in localstorage.
