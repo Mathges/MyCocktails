@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import Home from './src/screens/Home/Home';
 import PersonalCocktails from './src/screens/PersonalCocktails/PersonalCocktails';
+import CreatePersonalCocktails from './src/screens/CreatePersonalCocktails/CreatePersonalCocktails';
 import Header from './src/components/Header/Header';
 
 //import DefaultStyle from './DefaultStyle';
@@ -53,6 +54,10 @@ const App = () => {
             }}>
             <Drawer.Screen name="Home" component={Home} />
             <Drawer.Screen name="MyCocktails" component={PersonalCocktails} />
+            <Drawer.Screen
+              name="Create One"
+              component={CreatePersonalCocktails}
+            />
           </Drawer.Navigator>
         </NavigationContainer>
       </StyledBackground>
