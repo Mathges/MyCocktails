@@ -36,38 +36,40 @@ const App = () => {
 
   return (
     <ApiCocktailsContext.Provider value={apiCocktails}>
-      <StyledBackground source={require('./src/assets/background.jpg')}>
-        <NavigationContainer theme={MyTheme}>
-          <Header />
-          <Drawer.Navigator
-            initialRouteName="Home"
-            screenOptions={{
-              headerShown: false,
-              drawerPosition: 'right',
-              drawerStyle: {
-                backgroundColor: 'rgba(0,0,0,0)',
-                width: 200,
-                maxHeight: 400,
-              },
-              drawerContentContainerStyle: {
-                backgroundColor: 'rgba(255,255,255, 0.8)',
-                borderTopLeftRadius: 30,
-                borderBottomLeftRadius: 30,
-              },
-              drawerLabelStyle: {
-                color: '#000',
-                fontSize: 20,
-              },
-            }}>
-            <Drawer.Screen name="Home" component={Home} />
-            <Drawer.Screen name="MyCocktails" component={PersonalCocktails} />
-            <Drawer.Screen
-              name="Create One"
-              component={CreatePersonalCocktails}
-            />
-          </Drawer.Navigator>
-        </NavigationContainer>
-      </StyledBackground>
+      <CreateCocktailContext.Provider value={createCocktail}>
+        <StyledBackground source={require('./src/assets/background.jpg')}>
+          <NavigationContainer theme={MyTheme}>
+            <Header />
+            <Drawer.Navigator
+              initialRouteName="Home"
+              screenOptions={{
+                headerShown: false,
+                drawerPosition: 'right',
+                drawerStyle: {
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  width: 200,
+                  maxHeight: 400,
+                },
+                drawerContentContainerStyle: {
+                  backgroundColor: 'rgba(255,255,255, 0.8)',
+                  borderTopLeftRadius: 30,
+                  borderBottomLeftRadius: 30,
+                },
+                drawerLabelStyle: {
+                  color: '#000',
+                  fontSize: 20,
+                },
+              }}>
+              <Drawer.Screen name="Home" component={Home} />
+              <Drawer.Screen name="MyCocktails" component={PersonalCocktails} />
+              <Drawer.Screen
+                name="Create One"
+                component={CreatePersonalCocktails}
+              />
+            </Drawer.Navigator>
+          </NavigationContainer>
+        </StyledBackground>
+      </CreateCocktailContext.Provider>
     </ApiCocktailsContext.Provider>
   );
 };

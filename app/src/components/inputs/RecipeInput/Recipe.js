@@ -1,21 +1,23 @@
 import React, {useContext} from 'react';
 import {View} from 'react-native';
 import {CreateCocktailContext} from '../../../utils/Contexts';
+import {StyledLabel, StyledInput} from './style';
 
-import {StyledBasicTextInput, StyledBasicTextLabel} from './style';
-
-const BasicTextInput = () => {
+const Recipe = () => {
   const {cocktail, setCocktail} = useContext(CreateCocktailContext);
+
   return (
     <View>
-      <StyledBasicTextLabel>Name</StyledBasicTextLabel>
-      <StyledBasicTextInput
+      <StyledLabel>Recipe</StyledLabel>
+      <StyledInput
+        multiline={true}
+        numberOfLines={10}
         onChangeText={text => {
-          setCocktail({...cocktail, name: text});
+          setCocktail({...cocktail, recipe: text});
         }}
       />
     </View>
   );
 };
 
-export default BasicTextInput;
+export default Recipe;

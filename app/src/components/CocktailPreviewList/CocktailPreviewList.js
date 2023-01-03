@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {FlatList, SafeAreaView} from 'react-native';
 
-import ApiCocktailsContext from '../../utils/Contexts';
+import {ApiCocktailsContext} from '../../utils/Contexts';
 
 import CocktailPreview from '../CocktailPreview/CocktailPreview';
 
