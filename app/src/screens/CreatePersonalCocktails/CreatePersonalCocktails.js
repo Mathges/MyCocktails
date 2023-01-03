@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {FlatList, Text, View} from 'react-native';
 import styled from 'styled-components';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const CreatePersonalCocktails = () => {
   const [ingredient, setIngredient] = useState('');
@@ -12,13 +13,6 @@ const CreatePersonalCocktails = () => {
 
   return (
     <View>
-      <StyledLabel>Name</StyledLabel>
-      <StyledInput
-        onChangeText={text => {
-          setCocktail({...cocktail, name: text});
-        }}
-      />
-
       <StyledLabel>Ingredients</StyledLabel>
       <StyledInput
         onChangeText={text => {
@@ -60,9 +54,21 @@ const CreatePersonalCocktails = () => {
       />
 
       <StyledLabel>Recipe</StyledLabel>
-      <StyledInput multiline={true} numberOfLines={10} />
+      <StyledInput
+        multiline={true}
+        numberOfLines={10}
+        onChangeText={text => {
+          setCocktail({...cocktail, recipe: text});
+        }}
+      />
 
-      <CreateButton>
+      <CreateButton
+        onPress={async () => {
+          await AsyncStorage.setItem(
+            `${JSON.stringify(cocktail.name)}`,
+            JSON.stringify(cocktail),
+          );
+        }}>
         <Text>Create</Text>
       </CreateButton>
     </View>
@@ -75,11 +81,11 @@ const StyledInput = styled.TextInput`
 
 const StyledLabel = styled.Text`
   color: #fff;
-  font-size: 20;
+  font-size: 20px;
 `;
 
 const CreateButton = styled.TouchableOpacity`
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: green;
 `;
 
 const AddButton = styled.TouchableOpacity`

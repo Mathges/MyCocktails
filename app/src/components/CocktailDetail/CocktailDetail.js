@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {Image, ScrollView} from 'react-native';
 
-import BackButton from '../BackButton/BackButton';
+import BackButton from '../buttons/BackButton/BackButton';
 import CocktailPicture from '../CocktailPicture/CocktailPicture';
 
 import formatIngredients from '../../utils/formatIngredients';

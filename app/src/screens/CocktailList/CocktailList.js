@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/inputs/SearchBar/SearchBar';
 import CocktailPreviewList from '../../components/CocktailPreviewList/CocktailPreviewList';
 
 import StyleCocktailList from './style';

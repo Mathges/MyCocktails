@@ -11,13 +11,20 @@ import Header from './src/components/Header/Header';
 
 //import DefaultStyle from './DefaultStyle';
 
-import ApiCocktailsContext from './src/utils/Contexts';
+import {ApiCocktailsContext, CreateCocktailContext} from './src/utils/Contexts';
 
 const Drawer = createDrawerNavigator();
 
 const App = () => {
   const [cocktails, setCocktails] = useState([]);
-  const value = {cocktails, setCocktails};
+  const [cocktail, setCocktail] = useState({
+    name: '',
+    ingredients: [],
+    recipe: '',
+  });
+
+  const createCocktail = {cocktail, setCocktail};
+  const apiCocktails = {cocktails, setCocktails};
 
   const MyTheme = {
     ...DefaultTheme,
@@ -28,7 +35,7 @@ const App = () => {
   };
 
   return (
-    <ApiCocktailsContext.Provider value={value}>
+    <ApiCocktailsContext.Provider value={apiCocktails}>
       <StyledBackground source={require('./src/assets/background.jpg')}>
         <NavigationContainer theme={MyTheme}>
           <Header />

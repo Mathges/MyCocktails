@@ -5,4 +5,13 @@ const ApiCocktailsContext = createContext({
   useCocktails: () => {},
 });
 
-export default ApiCocktailsContext;
+const CreateCocktailContext = createContext({
+  cocktail: {
+    name: '',
+    ingredients: [],
+    recipe: '',
+  },
+  useCocktails: () => {},
+});
+
+export {ApiCocktailsContext, CreateCocktailContext};
