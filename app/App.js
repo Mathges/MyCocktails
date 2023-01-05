@@ -5,7 +5,7 @@ import 'react-native-gesture-handler';
 import styled from 'styled-components';
 
 import Home from './src/screens/Home/Home';
-import PersonalCocktails from './src/screens/PersonalCocktails/PersonalCocktails';
+import PersonalCocktailsScreen from './src/screens/PersonalCocktails/PersonalCocktailsScreen';
 import CreatePersonalCocktails from './src/screens/CreatePersonalCocktails/CreatePersonalCocktails';
 import Header from './src/components/Header/Header';
 
@@ -61,7 +61,10 @@ const App = () => {
                 },
               }}>
               <Drawer.Screen name="Home" component={Home} />
-              <Drawer.Screen name="MyCocktails" component={PersonalCocktails} />
+              <Drawer.Screen
+                name="MyCocktails"
+                component={PersonalCocktailsScreen}
+              />
               <Drawer.Screen
                 name="Create One"
                 component={CreatePersonalCocktails}

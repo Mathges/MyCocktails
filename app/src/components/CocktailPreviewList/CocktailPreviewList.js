@@ -12,7 +12,7 @@ const CocktailPreviewList = () => {
     <SafeAreaView>
       <FlatList
         data={cocktails}
-        renderItem={props => <CocktailPreview {...props} />}
+        renderItem={item => <CocktailPreview {...item} />}
         keyExtractor={item => item.drinkId}
         contentContainerStyle={{paddingBottom: 128}}
       />

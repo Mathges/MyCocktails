@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import {CreateCocktailContext} from '../../../utils/Contexts';
 import {StyledLabel, StyledInput} from './style';
 
-const Recipe = () => {
+const RecipeInput = () => {
   const {cocktail, setCocktail} = useContext(CreateCocktailContext);
 
   return (
@@ -20,4 +20,4 @@ const Recipe = () => {
   );
 };
 
-export default Recipe;
+export default RecipeInput;

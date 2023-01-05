@@ -4,7 +4,7 @@ import AddIngredientButton from '../../buttons/AddIngredientButton/AddIngredient
 
 import {StyledInput, StyledLabel} from './style';
 
-const AddIngredient = () => {
+const AddIngredientInput = () => {
   const [ingredient, setIngredient] = useState('');
 
   return (
@@ -13,7 +13,6 @@ const AddIngredient = () => {
       <StyledInput
         onChangeText={text => {
           setIngredient(text);
-          console.log(ingredient);
         }}
       />
       <AddIngredientButton ingredient={ingredient} />
@@ -21,4 +20,4 @@ const AddIngredient = () => {
   );
 };
 
-export default AddIngredient;
+export default AddIngredientInput;
