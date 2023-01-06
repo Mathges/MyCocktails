@@ -1,27 +1,18 @@
-import React, {useEffect, useState} from 'react';
-import {FlatList, SafeAreaView, View} from 'react-native';
+import React, {useContext, useEffect, useState} from 'react';
+import {SafeAreaView} from 'react-native';
 import getStorageCocktails from '../../utils/asyncStorage';
 import styled from 'styled-components';
-import Test from '../../components/Test';
+import {UserCocktailsContext} from '../../utils/Contexts';
 
 const PersonalCocktails = () => {
-  const [cocktails, setCocktails] = useState([]);
-
-  const getCocktails = async () => {
-    const response = await getStorageCocktails();
-    return setCocktails(response);
-  };
+  const {userCocktails, setUserCocktails} = useContext(UserCocktailsContext);
 
   useEffect(() => {
-    getCocktails();
-  }, []);
-  console.log(cocktails);
-  // TODO: pass personal cocktails as context
-  return (
-    <SafeAreaView>
-      <Test {...cocktails} />
-    </SafeAreaView>
-  );
+    getStorageCocktails().then(response => setUserCocktails(response));
+  }, [setUserCocktails]);
+  console.log(userCocktails);
+
+  return ;
 };
 
 const StyledText = styled.Text`

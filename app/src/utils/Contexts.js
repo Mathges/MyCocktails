@@ -14,4 +14,9 @@ const CreateCocktailContext = createContext({
   useCocktails: () => {},
 });
 
-export {ApiCocktailsContext, CreateCocktailContext};
+const UserCocktailsContext = createContext({
+  userCocktails: [],
+  useUserCocktails: () => {},
+});
+
+export {ApiCocktailsContext, CreateCocktailContext, UserCocktailsContext};
