@@ -3,6 +3,7 @@ import {SafeAreaView} from 'react-native';
 import getStorageCocktails from '../../utils/asyncStorage';
 import styled from 'styled-components';
 import {UserCocktailsContext} from '../../utils/Contexts';
+import UserCocktailsList from '../../components/UserCocktailsList/UserCocktailsList';
 
 const PersonalCocktails = () => {
   const {userCocktails, setUserCocktails} = useContext(UserCocktailsContext);
@@ -12,7 +13,7 @@ const PersonalCocktails = () => {
   }, [setUserCocktails]);
   console.log(userCocktails);
 
-  return ;
+  return <UserCocktailsList />;
 };
 
 const StyledText = styled.Text`
