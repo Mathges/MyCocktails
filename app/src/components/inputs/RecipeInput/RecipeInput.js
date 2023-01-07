@@ -1,15 +1,15 @@
 import React, {useContext} from 'react';
 import {View} from 'react-native';
 import {CreateCocktailContext} from '../../../utils/Contexts';
-import {StyledLabel, StyledInput} from './style';
+import {RecipeLabel, RecipeTextInput} from './style';
 
 const RecipeInput = () => {
   const {cocktail, setCocktail} = useContext(CreateCocktailContext);
 
   return (
     <View>
-      <StyledLabel>Recipe</StyledLabel>
-      <StyledInput
+      <RecipeLabel>Recipe</RecipeLabel>
+      <RecipeTextInput
         multiline={true}
         numberOfLines={10}
         onChangeText={text => {

@@ -3,14 +3,14 @@ import {FlatList, View, Text} from 'react-native';
 import {CreateCocktailContext} from '../../utils/Contexts';
 
 import IngredientListItem from './IngredientListItem';
-import {StyledLabel} from './style';
+import {ListLabel} from './style';
 
 const IngredientList = () => {
   const {cocktail} = useContext(CreateCocktailContext);
 
   return (
     <View>
-      <StyledLabel>Ingredient List</StyledLabel>
+      <ListLabel>Ingredient List</ListLabel>
       <FlatList
         data={cocktail.ingredients}
         renderItem={({item, index}) => (

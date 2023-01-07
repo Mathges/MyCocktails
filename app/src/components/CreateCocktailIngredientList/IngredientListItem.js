@@ -1,16 +1,15 @@
 import React from 'react';
-import {Text} from 'react-native';
 
 import RemoveIngredient from '../buttons/RemoveIngredientButton/RemoveIngredient';
 
-import {StyledIngredientListItem} from './style';
+import {ListItem, IngredientName} from './style';
 
 const IngredientListItem = ({...props}) => {
   return (
-    <StyledIngredientListItem>
-      <Text>{props.item}</Text>
+    <ListItem>
+      <IngredientName>{props.item}</IngredientName>
       <RemoveIngredient index={props.index} />
-    </StyledIngredientListItem>
+    </ListItem>
   );
 };
 

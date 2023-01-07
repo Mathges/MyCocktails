@@ -3,7 +3,7 @@ import {Text} from 'react-native';
 
 import {CreateCocktailContext} from '../../../utils/Contexts';
 
-import AddButton from './style';
+import {AddButton, ButtonLabel} from './style';
 
 const AddIngredientButton = props => {
   const {cocktail, setCocktail} = useContext(CreateCocktailContext);
@@ -11,12 +11,15 @@ const AddIngredientButton = props => {
   return (
     <AddButton
       onPress={() => {
+        if (props.ingredient === '') {
+          return;
+        }
         setCocktail({
           ...cocktail,
           ingredients: [...cocktail.ingredients, props.ingredient],
         });
       }}>
-      <Text>ADD</Text>
+      <ButtonLabel>ADD</ButtonLabel>
     </AddButton>
   );
 };

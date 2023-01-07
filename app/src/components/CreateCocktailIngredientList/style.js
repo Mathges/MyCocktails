@@ -1,13 +1,25 @@
 import styled from 'styled-components';
 
-const StyledIngredientListItem = styled.View`
+const ListItem = styled.View`
   background-color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  border-radius: 8px;
 `;
 
-const StyledLabel = styled.Text`
-  color: #fff;
+const IngredientName = styled.Text`
+  width: 80%;
   font-size: 20px;
+  color: white;
+  padding-left: 5px;
 `;
 
-export {StyledIngredientListItem, StyledLabel};
+const ListLabel = styled.Text`
+  color: #fff;
+  font-size: 30px;
+  margin-left: 10px;
+`;
+
+export {ListItem, ListLabel, IngredientName};

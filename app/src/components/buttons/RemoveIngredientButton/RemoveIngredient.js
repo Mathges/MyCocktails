@@ -1,8 +1,7 @@
 import React, {useContext} from 'react';
-import {Text} from 'react-native';
 import {CreateCocktailContext} from '../../../utils/Contexts';
 
-import RemoveButton from './style';
+import {RemoveButton, ButtonLabel} from './style';
 
 const RemoveIngredient = props => {
   const {cocktail, setCocktail} = useContext(CreateCocktailContext);
@@ -18,7 +17,7 @@ const RemoveIngredient = props => {
           ingredients: array,
         });
       }}>
-      <Text>Remove</Text>
+      <ButtonLabel>Remove</ButtonLabel>
     </RemoveButton>
   );
 };

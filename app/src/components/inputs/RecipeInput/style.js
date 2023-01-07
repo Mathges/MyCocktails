@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-const StyledInput = styled.TextInput`
+const RecipeTextInput = styled.TextInput`
   background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 10px;
 `;
 
-const StyledLabel = styled.Text`
+const RecipeLabel = styled.Text`
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
+  margin-left: 10px;
 `;
 
-export {StyledLabel, StyledInput};
+export {RecipeLabel, RecipeTextInput};

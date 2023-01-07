@@ -9,15 +9,12 @@ const PersonalCocktails = () => {
   const {userCocktails, setUserCocktails} = useContext(UserCocktailsContext);
 
   useEffect(() => {
+    // useEffect accepts Promises but not internal asynchronicity (await)
+    // lost a couple hours on this :(
     getStorageCocktails().then(response => setUserCocktails(response));
   }, [setUserCocktails]);
-  console.log(userCocktails);
 
   return <UserCocktailsList />;
 };
-
-const StyledText = styled.Text`
-  background-color: rgba(255, 255, 255, 0.3);
-`;
 
 export default PersonalCocktails;

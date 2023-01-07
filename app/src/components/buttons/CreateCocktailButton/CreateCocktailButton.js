@@ -1,9 +1,8 @@
 import React, {useContext} from 'react';
-import {Text} from 'react-native';
 import {CreateCocktailContext} from '../../../utils/Contexts';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import CreateButton from './style';
+import {CreateButton, ButtonLabel} from './style';
 
 const CreateCocktailButton = () => {
   const {cocktail} = useContext(CreateCocktailContext);
@@ -16,7 +15,7 @@ const CreateCocktailButton = () => {
           JSON.stringify(cocktail),
         );
       }}>
-      <Text>Create</Text>
+      <ButtonLabel>Create</ButtonLabel>
     </CreateButton>
   );
 };
