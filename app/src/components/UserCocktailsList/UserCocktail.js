@@ -1,8 +1,8 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+
+import RemoveUserCocktailButton from '../buttons/RemoveUserCocktailButton/RemoveUserCocktailButton';
 
 import {
-  StyledText,
   UserCocktailCard,
   CocktailName,
   Ingredient,
@@ -24,6 +24,7 @@ const UserCocktail = ({item}) => {
       {ingredientList}
       <Title>Recipe</Title>
       <Recipe>{item.recipe}</Recipe>
+      <RemoveUserCocktailButton cocktailName={item.name} />
     </UserCocktailCard>
   );
 };
