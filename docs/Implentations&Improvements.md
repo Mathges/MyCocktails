@@ -53,4 +53,4 @@ Some refacto has been done and the recommandations from 19/12 has been integrate
 - I18n
 - Theming: theming is not done (should've been done earlier, the refacto for this one will be big), also adding fonts
 - Context: just discovered and made Context.Consumer working, should integrate it everywhere it should be
-
+- UX (returns some error message to user)
