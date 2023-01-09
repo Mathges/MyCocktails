@@ -24,14 +24,33 @@ Routes can be isolated from app.
 
 Axios call should be isolated too.
 
-Some UX is missing, like loading while requesting api, returning error if there is from api, or a not found page if user is asking for non-existent cocktail.  
+Some UX is missing, like loading while requesting api, returning error if there is from api, or a not found component if user is asking for non-existent cocktail.  
 
 
 ### Priority
 
 - Isolate Axios (done) & router
 - Make css vars
-- Loading and 404 page
+- Loading component and 404 component
 - Better scrollview for cocktail details (done)
 - making api BaseURL as env var (done)
 - make image component (done)
+
+## 9/01
+
+### Work done 
+
+User can now create cocktails and see them through a list (without pictures)
+
+Some refacto has been done and the recommandations from 19/12 has been integrated.
+
+### Improvements
+
+- Code quality, refacto can be improved, imports should be reorganized
+- Router : isolate app routing from App.js
+- Feature: modify and delete user cocktails
+- Integrate some file loader to let user load picture for his cocktails
+- I18n
+- Theming: theming is not done (should've been done earlier, the refacto for this one will be big), also adding fonts
+- Context: just discovered and made Context.Consumer working, should integrate it everywhere it should be
+
