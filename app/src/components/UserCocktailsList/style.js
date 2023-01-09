@@ -10,6 +10,7 @@ const UserCocktailCard = styled.View`
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
   margin: 2% auto;
+  padding: 2%;
 `;
 
 const MainTitle = styled.Text`
