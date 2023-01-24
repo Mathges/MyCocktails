@@ -13,6 +13,7 @@ const DetailCard = styled.View`
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   margin-top: 5%;
+  padding: 3%;
 `;
 
 const CardSection = styled.View`

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Image, ScrollView} from 'react-native';
 
-import BackButton from '../BackButton/BackButton';
+import BackButton from '../buttons/BackButton/BackButton';
+import CocktailPicture from '../CocktailPicture/CocktailPicture';
 
 import formatIngredients from '../../utils/formatIngredients';
 
@@ -33,23 +33,22 @@ const CocktailDetail = cocktail => {
   return (
     <CardContainer>
       <BackButton />
-      <ScrollView>
-        <DetailCard>
-          <MainTitle>{cocktail.strDrink}</MainTitle>
-          <Image
-            source={{uri: cocktail.strDrinkThumb}}
-            style={{width: 250, height: 250}}
-          />
-          <CardSection>
-            <Subtitle>Ingredients</Subtitle>
-            {ingredientList}
-          </CardSection>
-          <CardSection>
-            <Subtitle>Recipe</Subtitle>
-            <Recipe>{cocktail.strInstructions}</Recipe>
-          </CardSection>
-        </DetailCard>
-      </ScrollView>
+      <DetailCard>
+        <MainTitle>{cocktail.strDrink}</MainTitle>
+        <CocktailPicture
+          image={cocktail.strDrinkThumb}
+          width={250}
+          height={250}
+        />
+        <CardSection>
+          <Subtitle>Ingredients</Subtitle>
+          {ingredientList}
+        </CardSection>
+        <CardSection>
+          <Subtitle>Recipe</Subtitle>
+          <Recipe>{cocktail.strInstructions}</Recipe>
+        </CardSection>
+      </DetailCard>
     </CardContainer>
   );
 };
